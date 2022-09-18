@@ -4,7 +4,7 @@ WORKDIR /code
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY run.py .
-COPY project project
+COPY coursework_5 coursework_5
 ENV FLASK_APP=run.py
 
 CMD gunicorn run:app -b 0.0.0.0:80
