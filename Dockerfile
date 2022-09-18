@@ -9,4 +9,5 @@ COPY templates templates
 COPY data data
 ENV FLASK_APP=run.py
 
+
 CMD gunicorn run:app -b 0.0.0.0:80
