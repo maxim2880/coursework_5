@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from skills import *
+from project.skills import *
 
 
 @dataclass

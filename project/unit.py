@@ -1,7 +1,7 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
-from equipment import Equipment, Weapon, Armor
-from classes import UnitClass
+from project.equipment import Equipment, Weapon, Armor
+from project.classes import UnitClass
 from random import randint, uniform
 from typing import Optional
 

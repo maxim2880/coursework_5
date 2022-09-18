@@ -1,4 +1,4 @@
-from unit import BaseUnit
+from project.unit import BaseUnit
 
 
 class BaseSingleton(type):
