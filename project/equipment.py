@@ -1,3 +1,4 @@
+import os
 from dataclasses import dataclass
 from typing import List
 from random import uniform
@@ -6,6 +7,8 @@ import marshmallow
 import json
 
 from click.parser import Option
+
+from project.settings import ROOT_DIR
 
 
 @dataclass
@@ -58,7 +61,7 @@ class Equipment:
 
     @staticmethod
     def _get_equipment_data() -> EquipmentData:
-        with open("../data/equipment.json", encoding='utf-8') as equipment_file:
+        with open(os.path.join(ROOT_DIR, '../data/equipment.json'), encoding='utf-8') as equipment_file:
             data = json.load(equipment_file)
         equipment_schema = marshmallow_dataclass.class_schema(EquipmentData)
         try:
